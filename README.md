@@ -117,4 +117,4 @@ Per vedere il risultato:
 npx serve _site
 ```
 
-Per lavorare su un solo tool basta la sua cartella, per esempio `npm run dev`.
+Per lavorare su un solo tool basta la sua cartella, per esempio `npm run dev`. 
