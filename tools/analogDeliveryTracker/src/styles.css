@@ -1,0 +1,6 @@
+@import "tailwindcss" source("../");
+@import "@fontsource-variable/recursive";
+
+@theme {
+  --color-brand: #0b3d91;
+}
