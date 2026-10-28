@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Indice degli strumenti PN Toolbox">
+
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'none';
+  script-src https://cdn.jsdelivr.net;
+  style-src 'unsafe-inline';
+  object-src 'none'; base-uri 'none'; form-action 'none'">
+
+<title>PN Toolbox</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.3/dist/index.global.js"
+        integrity="sha384-2ql948lIdLcGEE0/qxNiudyTjgauA3RDJERu5xW75kFCvSl5a9odyQYCb6tEjnmB"
+        crossorigin="anonymous"></script>
+
+<style type="text/tailwindcss">
+  @theme {
+    --color-brand: #0b3d91;
+  }
+</style>
+</head>
+
+<body class="min-h-screen bg-slate-100 text-slate-800 antialiased">
+  <main class="mx-auto w-[min(54rem,calc(100%-3rem))] py-[clamp(4rem,12vh,8rem)]">
+    <header class="mb-12">
+      <h1 class="text-5xl font-semibold tracking-tight text-slate-900 sm:text-6xl">pn-toolbox</h1>
+      <p class="mt-4 text-lg text-slate-500">Una raccolta di strumenti grafici per SEND</p>
+    </header>
+
+    <section aria-labelledby="tools-heading">
+      <h2 id="tools-heading" class="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-600">Tools</h2>
+      <div class="grid gap-3">
+        <!-- TOOL_CARDS -->
+      </div>
+    </section>
+  </main>
+</body>
+</html>
