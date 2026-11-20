@@ -351,7 +351,19 @@ export class AwsDirectory {
       await rememberHandle(handle);
     }
 
-    const files = await readTree(handle);
+    let files;
+    try {
+      files = await readTree(handle);
+    } catch (error) {
+      // Cartella spostata, cancellata o ricreata (es. `~/.aws` diventato un
+      // link): l'handle ricordato non porta più da nessuna parte. Va
+      // dimenticato, o ogni clic fallirebbe uguale senza riaprire il selettore.
+      chosen = null;
+      await rememberHandle(null);
+      throw new AwsDirError(
+        `Cartella ${handle.name} non più leggibile (${error.name}): ` +
+        "premi di nuovo per sceglierla.");
+    }
     if (!Object.keys(files).length) {
       chosen = null;                        // sbagliata: non ricordarla
       await rememberHandle(null);
